@@ -6,9 +6,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     width: 100%;
     margin: 0;
-    background-image: url(./texture-marbre-blanc-pour-fond_42682-286.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(./fond-texture-marbre_125540-356.avif);
 }
 .todo-container{
     margin-top: 8%;
@@ -25,7 +23,7 @@ h1{
     font-size: 350%;
     font-weight: 300;
     text-decoration: underline;
-    color: rgb(70, 68, 68);
+    color: rgb(56, 55, 55);
 }
 input{
     padding: 10px 5px;
@@ -33,7 +31,7 @@ input{
     margin: auto;
     border-radius: 15px;
     border: solid rgb(241, 234, 234) 3px;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 10px 5px 5px rgb(100, 99, 99);
     margin-bottom: 5px;
     outline: none;
 }
@@ -47,11 +45,38 @@ body > div > button{
     font-size: 100%;
     font-weight: 200;
     cursor: pointer;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 10px 5px 5px rgb(100, 99, 99);
+    outline: none;
 }
-ul{
+    body > div > button:hover{
+        background-color: rgb(162, 189, 240);
+        border: solid 3px rgb(162, 189, 240);
+    }
+    ul{
     margin: auto;
     margin-top: 40px;
     list-style: none;
     padding: 0;
+}
+li > div > button{
+    border-radius: 15px;
+    height: 35px;
+    width: 55px;
+    cursor: pointer;
+}
+li > div > :nth-child(1):hover{
+    background-color: rgb(72, 179, 113);
+    border: solid 1px rgb(72, 179, 113);
+}
+li > div > :nth-child(2):hover{
+    background-color: rgb(163, 83, 72);
+    border: solid 1px rgb(163, 83, 72);
+}
+p{
+    color:  rgb(11, 44, 104);
+    font-size: 120%;
+}
+.completed{
+    color: rgb(173, 158, 158);
+    text-decoration: line-through ;
 }
