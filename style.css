@@ -1,0 +1,57 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    margin: 0;
+    background-image: url(./texture-marbre-blanc-pour-fond_42682-286.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.todo-container{
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    margin: auto;
+}
+h1{
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    font-size: 350%;
+    font-weight: 300;
+    text-decoration: underline;
+    color: rgb(70, 68, 68);
+}
+input{
+    padding: 10px 5px;
+    width: 70%;
+    margin: auto;
+    border-radius: 15px;
+    border: solid rgb(241, 234, 234) 3px;
+    box-shadow: 10px 5px 5px grey;
+    margin-bottom: 5px;
+    outline: none;
+}
+body > div > button{
+    padding: 10px 5px;
+    width: calc(70% + 20px);
+    margin: auto;
+    border: solid  rgb(241, 234, 234) 3px;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 100%;
+    font-weight: 200;
+    cursor: pointer;
+    box-shadow: 10px 5px 5px grey;
+}
+ul{
+    margin: auto;
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
