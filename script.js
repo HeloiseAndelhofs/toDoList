@@ -9,16 +9,28 @@ function addTasks(){
     taskList.innerHTML += `<li>
     <p>${taskValue}</p>
     <div>
-        <button>Done</button>
-        <button>Delete</button>
+        <button class="done">Done</button>
+        <button class="delete">Delete</button>
     </div>
 </li>`
 task.value = "";
 };
-addTask.addEventListener("click", addTasks);
 
-function deleteTask(event){
-    const deleteTasks = event.target.closest("li");
-    deleteTasks.remove();
+function deleteOrCompleteTask(event){
+    const btnClickedClass = event.target.classList;
+    console.log(btnClickedClass);
+    if (btnClickedClass[0] === "done") {
+        btnClickedClass.remove("done");
+        btnClickedClass.add("undo");
+    }
+    else if (btnClickedClass[0] === "undo") {
+        btnClickedClass.remove("undo");
+        btnClickedClass.add("done");
+    }
+    else { 
+        const deleteTasks = event.target.closest("li");
+         deleteTasks.remove();
+    }
 }
-taskList.addEventListener("click", deleteTask);
+    addTask.addEventListener("click", addTasks);
+    taskList.addEventListener("click", deleteOrCompleteTask);
