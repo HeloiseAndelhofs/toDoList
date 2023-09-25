@@ -3,7 +3,6 @@ let addTask = document.getElementById("add-task");
 let taskList = document.getElementById("task-list");
 
 
-
 function addTasks(){
     let taskValue = task.value;
     taskList.innerHTML += `<li>
@@ -16,20 +15,21 @@ function addTasks(){
 task.value = "";
 };
 
+
 function deleteOrCompleteTask(event){
     const btnClickedClass = event.target.classList;
-    console.log(btnClickedClass);
     if (btnClickedClass[0] === "done") {
         btnClickedClass.remove("done");
         btnClickedClass.add("undo");
-    }
+        }
     else if (btnClickedClass[0] === "undo") {
         btnClickedClass.remove("undo");
         btnClickedClass.add("done");
+    
     }
     else { 
         const deleteTasks = event.target.closest("li");
-         deleteTasks.remove();
+        deleteTasks.remove();
     }
 }
     addTask.addEventListener("click", addTasks);
